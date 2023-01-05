@@ -66,3 +66,10 @@ class StudentClass implements StudentClassInterface {
     return this.firstName;
   }
 }
+
+function createStudent(cStudent: StudentClassConstructorInterface, firstName: string, lastName: string): StudentClassInterface {
+    return new cStudent(firstName, lastName);
+}
+
+const student1 = createStudent(StudentClass, 'mike', 'tyson');
+//console.log(student1);
